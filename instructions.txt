@@ -131,3 +131,11 @@ If TS dont have this infomraiton it cannot check our code
 
 
 
+  Generate a Google Dev project
+at http://console.developers.google.com
+
+Enable Google Maps support inside the project
+
+Generate an API key
+
+Add the googel maps script tag to our HTML file
