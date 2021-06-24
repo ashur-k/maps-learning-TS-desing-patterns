@@ -139,3 +139,40 @@ Enable Google Maps support inside the project
 Generate an API key
 
 Add the googel maps script tag to our HTML file
+
+Setting UP Google Maps API
+  creating new project:
+    1. follow the link http://console.developers.google.com
+    2.  Find a dropdown on top lefthand side click and 
+            => create NEW PROJECT  
+            => Name the project 
+    3. Select the project taht you have created
+    4. Click on notificaiton and select the new project created
+
+    5. Find Navigation menu on top left hand side 
+          => API and services 
+                => click on library
+                => Maps JavaScript API
+    6. Click on it and hit Enable
+    7. Generate an API key
+        => go on navigation menu on left top hand isde 
+        => go on credentials
+        => find create credentials on screen click it and 
+              => Choose API key
+              => copy paste key for use
+    8. Add this script tag to your html page
+        https://maps.googleapis.com/maps/api/js?key=
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsyL92YzMv6UkkHh6v7D7NTS9JrJlOKUo"></script>
+    
+    9. Notice API key is included after api key =
+
+
+    TESTING IF API KEY IS WORKIGN FINE:
+      1. Go in broweser developer mode and look in at Console for any error related to google api
+      2. if there is any error most prbably something is wrong with key or url 
+
+      3. To test fhrther if we go on Netwrok tab in browser developers area
+      4. We can find js?key= and then status 200 in information that is another 
+          indicaiton maps are working fine 
+      5. Last we can type type google in console.log and we can see map object with all map 
+          properties in it, its clear indication that our maps api is working fine 
