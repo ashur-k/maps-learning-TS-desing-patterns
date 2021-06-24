@@ -1,12 +1,14 @@
 import faker from 'faker';
 
 export class User {
+  //class properties
   name: string;
   location: {
     lat: number;
     lng: number;
   };
 
+  //constructor start
   constructor() {
     this.name = faker.name.firstName();
     // we can't declare values inside locaiton directly 
@@ -15,7 +17,12 @@ export class User {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude()),
     };
+  }  //constructor end
+
+  markerContent(): string{
+    return `User Name: ${this.name}`
   }
+
 }
 
 // Explanaiton:
