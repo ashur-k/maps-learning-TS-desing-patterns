@@ -197,4 +197,13 @@ Google Maps integration with TS
 
     so after installing this package if we type google in index.ts we will not see any error
 
-  
+    We can again hold control and click on google in index.ts and we can find google type sctipt
+    types file
+    
+    to see all properties on google maps
+      ctrl + click google on index.ts
+      once you are on type file hit
+        ctrl + Shift + p to pull vS code command pallete
+
+        search fold level 2 and selct it
+            all it does condense diffrent seciton of code

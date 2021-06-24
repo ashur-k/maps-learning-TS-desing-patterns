@@ -6,15 +6,21 @@
 
 import { User } from './User';
 import { Company } from './Company';
+import { CustomMap } from "./CustomMap";
 
-// creating instance of class User
-// console looging class
+// // creating instance of class User
+// // console looging class
+// const user = new User();
+// console.log(user);
+
+// // creating instance of class Company
+// // console looging class
+// const company = new Company();
+// console.log(company);
+
 const user = new User();
-console.log(user);
-
-// creating instance of class Company
-// console looging class
 const company = new Company();
-console.log(company);
+const customMap = new CustomMap('map');
 
-google
+customMap.addUserMarker(user);
+customMap.addCompanyMarker(company);

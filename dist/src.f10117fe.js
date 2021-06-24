@@ -136938,7 +136938,52 @@ function () {
 }();
 
 exports.Company = Company;
-},{"faker":"node_modules/faker/index.js"}],"src/index.ts":[function(require,module,exports) {
+},{"faker":"node_modules/faker/index.js"}],"src/CustomMap.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CustomMap = void 0;
+
+var CustomMap =
+/** @class */
+function () {
+  function CustomMap(divId) {
+    this.googleMap = new google.maps.Map(document.getElementById(divId), {
+      zoom: 2,
+      center: {
+        lat: 0,
+        lng: 0
+      }
+    });
+  }
+
+  CustomMap.prototype.addUserMarker = function (user) {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: user.location.lat,
+        lng: user.location.lng
+      }
+    });
+  };
+
+  CustomMap.prototype.addCompanyMarker = function (company) {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: company.location.lat,
+        lng: company.location.lng
+      }
+    });
+  };
+
+  return CustomMap;
+}();
+
+exports.CustomMap = CustomMap;
+},{}],"src/index.ts":[function(require,module,exports) {
 "use strict"; // when we are exporting some thing file from using just the export keyword  by itslef
 // we will receive taht in another file by placing the word inside the set of cutly braces 
 // we do this to safely export multiple different var from this file
@@ -136949,18 +136994,24 @@ Object.defineProperty(exports, "__esModule", {
 
 var User_1 = require("./User");
 
-var Company_1 = require("./Company"); // creating instance of class User
-// console looging class
+var Company_1 = require("./Company");
+
+var CustomMap_1 = require("./CustomMap"); // // creating instance of class User
+// // console looging class
+// const user = new User();
+// console.log(user);
+// // creating instance of class Company
+// // console looging class
+// const company = new Company();
+// console.log(company);
 
 
 var user = new User_1.User();
-console.log(user); // creating instance of class Company
-// console looging class
-
 var company = new Company_1.Company();
-console.log(company);
-google;
-},{"./User":"src/User.ts","./Company":"src/Company.ts"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var customMap = new CustomMap_1.CustomMap('map');
+customMap.addUserMarker(user);
+customMap.addCompanyMarker(company);
+},{"./User":"src/User.ts","./Company":"src/Company.ts","./CustomMap":"src/CustomMap.ts"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -136988,7 +137039,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60529" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61479" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -5,10 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maps</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsyL92YzMv6UkkHh6v7D7NTS9JrJlOKUo"></script>
-  <script src="./src/index.ts"></script>
+  
+  <style>
+    #map{
+      height: 50vh !important;
+      background-color: black !important;
+    }
+  </style>
 </head>
 <body>
-  <h1>Maps</h1>
+  <div style="height: 10vh; background-color: black !important;"></div>
+  <div id="map"></div>
+  <div style="height: 10vh; background-color: black !important;"></div>
+  <div></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsyL92YzMv6UkkHh6v7D7NTS9JrJlOKUo"></script>
+  <script src="./src/index.ts"></script>
 </body>
 </html>
