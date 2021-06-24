@@ -176,3 +176,25 @@ Setting UP Google Maps API
           indicaiton maps are working fine 
       5. Last we can type type google in console.log and we can see map object with all map 
           properties in it, its clear indication that our maps api is working fine 
+
+
+Google Maps integration with TS
+  so in last testing process we had google object now we have 
+  that google object available globaly availbe in our project
+
+  so issue is if we write google by itself in our TS project we 
+  will not find anything
+  We will see error message cannot find google
+  We need to tell TS about this global variable
+
+  To do this we need to install another type definiton
+    to install type definition file we need to go to npmjs.com
+
+    search @types/googlemaps
+    look at documentation to find out how to install and to find out other information
+    to isntall
+    npm install @types/googlemaps
+
+    so after installing this package if we type google in index.ts we will not see any error
+
+  
