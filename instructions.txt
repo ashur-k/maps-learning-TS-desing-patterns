@@ -103,4 +103,31 @@ If TS dont have this infomraiton it cannot check our code
 
                     so know if you go back on User.ts file you will notice that warning is gone
 
+                    if we hold ctrl key and click faker we can taken to type definiton file jsut istalled
+
+                    notice how file is named as index.d.ts tradaitionally file definition 
+                    files are named like this, if you look at file name like this
+                    you can be aware you are looking at type definiton file inisde this file there
+                    will be nothing but TS syntax
+
+ =======>       explanation on exporting with curly braces and default statement
+        export const red = 'red'; // so this can be safely exported inside those set of curly braces inside index.ts file
+
+        export default 'red'; // in this case we are not providing the name form this value 
+                              // trying to export 
+                              // so if we are exporting this in another file we will import it as
+                              // import red from './User';
+                              // so we can call it anythig for e.g color, red, 
+                              // userColor or anything that we want to call it
+                              // if we console.log it we simply will see red
+
+        // In TS usually we don't use these default statement
+        // Rhe reason for this is when we first starting with these modules
+        // it quickly get really confusing when you should use culry braces and when should not
+        // so convention in TS says never use default export statement
+        // so if we are required to use this its totally fine but in TS world convention is not
+        // to do this
+        // so that rule not applied to third party libs like fakers and thats totally aviodable
+
+
 
