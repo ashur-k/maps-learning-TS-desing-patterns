@@ -1,0 +1,30 @@
+To check for all globally installed packages and its dependencies, 
+run the npm list command followed by the -g flag.
+
+  > npm list -g
+
+This above command prints the all globally installed packages in tree view.
+
+
+To view the globally installed packages, without their dependencies use:
+
+    > npm list -g --depth=0
+
+You can also check if a specific package is installed globally or 
+not using the npm list -g followed by package name.
+
+  > npm list -g express
+
+Checking locally installed packages
+  > npm list
+  > npm list --depth=0
+  > npm list react
+
+npm install -g parcel-bundler
+  ==== installing parcel bundler globally, package helps browser with TS
+   ==== Tool to help us run Tyoescript in the browser 
+
+   So when we are going to run commande parcel index.html
+   its going to look for our .ts file and automatically will compile it
+
+   and wil have message that server is running at: http://localhost:1234
