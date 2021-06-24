@@ -28,3 +28,9 @@ npm install -g parcel-bundler
    its going to look for our .ts file and automatically will compile it
 
    and wil have message that server is running at: http://localhost:1234
+
+  
+File structure
+  notice index.ts with small alphabet
+  and Users.ts with capital alphabet so we are exporinting 
+  class from this file
