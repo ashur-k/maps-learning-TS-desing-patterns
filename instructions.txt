@@ -34,3 +34,73 @@ File structure
   notice index.ts with small alphabet
   and Users.ts with capital alphabet so we are exporinting 
   class from this file
+
+Going to npmjs.com and going to look for pcakage called 'faker' package
+  => https://www.npmjs.com/package/faker
+
+  installing faker
+    => npm install faker
+
+So when we are imporitng faker we are going the see error could not find declaration file for module
+
+Whenever we are writing TS code we are free to make use of JS code or more precisely JS
+libariries as much we want to
+  So we can install common JS libariries into TS project using NPM or 
+  even we can refrence JS file
+  we have written ourselves
+    but there is one caveat, remember TS wants to check our code by the use of types
+    TS wants to know what type of cuntion are there what calues they take and what values they return
+
+If TS dont have this infomraiton it cannot check our code
+  so we need to know that JS code we are using isnot going to have TS infomation attach to it
+  and TS cant figure out itself what types of values are floating
+  around the JS code
+      So to fix this problem TS has an idea of 
+          Type definition file
+            its an adapter between TS file we write and JS library that we are using 
+
+          its goign to tell all the differnet funcitons inside these libariries
+          what tyep of argument they take snd what value those funcitons return 
+
+      SO WE CAN THINK THESE TYPE DEFINTION FILES AS AN ADAPTER LAYER OF SOURCE
+
+      sometimes these files get installed automatically wwhen we install JS library
+
+      so when install axios in starting project we were not required to do anything
+      related to TS defnintion files its bacause axios include TS definiton file 
+      by default for us
+
+      now for this current instance faker module don't have this type definition file
+
+      so now we have ti install it manually if its not included for us
+      its challening to know if TS defininiton file is there or not 
+      but its straightforward to see error message warning and thats mean
+      we need to install type declaration file
+
+      once we understand we need to install this file its very simple process
+
+        so here what going to happen
+          almost all these TS definition files are publically available for you
+          so in other words vast majorities libraries are available
+
+            so for faker we have definitely typed naming scheme is available
+              so to install we have this kind of syntax:
+                @types/{library name}
+                        =
+                        =
+                        =
+                        =
+                        =
+                        =
+                @types/faker
+
+                so going back to npm web page => https://www.npmjs.com/package/faker
+                and searching @types/faker
+
+                so we can read description and other information and how to install
+
+                    npm install @types/faker
+
+                    so know if you go back on User.ts file you will notice that warning is gone
+
+
